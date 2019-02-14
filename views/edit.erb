@@ -36,11 +36,12 @@
     <label class="col-md-4 control-label" for="major">Major</label>
     <div class="col-md-5">
     <select id="major" name="major" class="form-control">
-      <option value="Information Systems">Information Systems</option>
-      <option value="Computer Science">Computer Science</option>
-      <option value="Biological Sciences">Biological Sciences</option>
-      <option value="Business Adminstration">Business Adminstration</option>
-      <option value="Computational Biology">Computational Biology</option>
+   
+      <option value="Information Systems" <% if @student[0][3]== "Information Systems" -%> selected="selected" <%end-%>> Information Systems</option>
+      <option value="Computer Science"<% if @student[0][3]== "Computer Science" -%> selected="selected" <%end-%>>Computer Science</option>
+      <option value="Biological Sciences" <% if @student[0][3]== "Biological Sciences" -%> selected="selected" <%end-%>>Biological Sciences</option>
+      <option value="Business Adminstration" <% if @student[0][3]== "Business Adminstration" -%> selected="selected" <%end-%>>Business Adminstration</option>
+      <option value="Computational Biology" <% if @student[0][3]== "Computational Biology" -%> selected="selected" <%end-%>>Computational Biology</option>
     </select>
     </div>
     </div>
@@ -50,8 +51,8 @@
     <label class="col-md-4 control-label" for="status">Status</label>
     <div class="col-md-5">
     <select id="status" name="status" class="form-control">
-      <option value='Enrolled'>Enrolled</option>
-      <option value='Graduated'>Graduated</option>
+      <option value='Enrolled' <% if @student[0][5]== "Enrolled" -%> selected="selected" <%end-%>>Enrolled</option>
+      <option value='Graduated' <% if @student[0][5]== "Graduated" -%> selected="selected" <%end-%>>Graduated</option>
     </select>
     </div>
     </div>
