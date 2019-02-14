@@ -1,28 +1,43 @@
 <p>
-    
+    <!-- Start of Table-->
     <table class="table table-striped">
-  <thead>
+    <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Full Name</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
- 
     </tr>
-  </thead>
-  <tbody>
+    </thead>
     
-      
+    <!-- Start of table body -->
+    <tbody>
+    
+      <!-- Looping through instance variable @all_students to get information -->
       <% @all_students.each do |id, firstname, lastname, major, email, status| %>
       <tr>
+      
+      <!-- Student's ID-->
       <th scope="id"><%= id %></th>
+      
+      <!-- Student's Full Name-->
       <td><a href="/students/<%= id %>"><%= firstname %> <%= lastname %></a></td>
+      
+      <!-- Edit button that is linked to the edit form-->
       <td><a href="/students/<%= id %>/edit" class="btn btn-success">Edit</a></td>
+      
+      <!-- Delete button that is linked to the delete route-->
       <td><a href = "/students/<%= id %>/delete" class="btn btn-danger">Delete</a></td>
       </tr>
+      
       <% end %>
+      <!-- End of loop -->
     
     
-  </tbody>
-</table>
+    </tbody>
+    <!-- End of table body -->
+    
+    </table>
+    <!-- End of Table-->
+
 </p>
