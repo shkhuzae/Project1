@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+
 <script>
 function goBack() {
   window.history.back();
@@ -29,6 +30,18 @@ function goBack() {
 		    <div class="p-3 mb-2 bg-light text-dark"><a href="/students/new">New Student</a></div>
 		    
 
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="/students">All</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/students/enrolled">Enrolled</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/students/graduated">Graduates</a>
+  </li>
+ 
+</ul>
 			<p>
 			  <%= yield %> <br /><br />
 			</p>
