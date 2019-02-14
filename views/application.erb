@@ -6,45 +6,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
+    <!-- Java script for the Back button -->
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-
+    <!-- Title -->
     <title>CMUQ Students</title>
+    
   </head>
+  
   <body>
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
+		  <!-- Heading -->
 		    <div class="p-3 mb-2 bg-danger text-white"> <h2> Students </h2></div>
-		    
+		  <!-- Link to creating a new student -->
 		    <div class="p-3 mb-2 bg-light text-dark"><a class="btn btn-light" href="/students/new">New Student</a></div>
 		    
 
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="/students">All</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="/students/enrolled">Enrolled</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="/students/graduated">Graduates</a>
-  </li>
+    <!-- Navigation Bar from bootstrap -->
+    <ul class="nav nav-tabs">
+      
+      <!-- Link to all students -->
+      <li class="nav-item">
+      <a class="nav-link active" href="/students">All</a>
+      </li>
+      
+      <!-- Link to enrolled students -->
+      <li class="nav-item">
+      <a class="nav-link active" href="/students/enrolled">Enrolled</a>
+      </li>
+      
+      <!-- Link to graduated students -->
+      <li class="nav-item">
+      <a class="nav-link active" href="/students/graduated">Graduates</a>
+      </li>
  
-</ul>
+      </ul>
+      
+      <!-- End of Navigation bar -->
+      
+      <!-- Yield Statement -->
 			<p>
 			  <%= yield %> <br /><br />
 			</p>
+			
+			<!-- Back button -->
 			<div class="p-3 mb-2 bg-light text-dark"><button class="btn btn-light" onclick="goBack()">Back</button></div>
 
 		</div>
