@@ -1,5 +1,5 @@
 <p>
-
+    <!-- Start of Table -->
     <table class="table table-striped">
   <thead>
     <tr>
@@ -11,9 +11,11 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
+  
+  <!-- Start of table body -->
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><%= @student[0][0] %></th>
       <td><%= @student[0][1] %></td>
       <td><%= @student[0][2] %></td>
       <td><%= @student[0][3] %></td>
@@ -22,6 +24,10 @@
     </tr>
     
   </tbody>
+  
+  <!-- End of table body -->
+  
 </table>
+<!-- End of Table -->
 
 </p>
