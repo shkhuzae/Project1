@@ -1,0 +1,70 @@
+<form class="form-horizontal" action='https://shouq-shkhuzae.c9users.io/students/<%= @student[0][0] %>' method='post'>
+<input type='hidden' name='_method' value='patch'>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Create Student</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="firstname">First Name</label>  
+  <div class="col-md-5">
+  <input id="firstname" name="firstname" type="text" placeholder="enter first name" value="<%= @student[0][1] %>" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastname">Last Name</label>  
+  <div class="col-md-5">
+  <input id="lastname" name="lastname" type="text" placeholder="enter last name" value="<%= @student[0][2] %>" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email </label>  
+  <div class="col-md-5">
+  <input id="email" name="email" type="text" placeholder="enter email" value="<%= @student[0][4] %>" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="major">Major</label>
+  <div class="col-md-5">
+    <select id="major" name="major" class="form-control">
+      <option value="Information Systems">Information Systems</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Biological Sciences">Biological Sciences</option>
+      <option value="Business Adminstration">Business Adminstration</option>
+      <option value="Computational Biology">Computational Biology</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="status">Status</label>
+  <div class="col-md-5">
+    <select id="status" name="status" class="form-control">
+      <option value='Enrolled'>Enrolled</option>
+      <option value='Graduated'>Graduated</option>
+
+    </select>
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Submit"></label>
+  <div class="col-md-4">
+    <button id="Submit" name="Submit" class="btn btn-success">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
