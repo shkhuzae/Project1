@@ -1,0 +1,28 @@
+<p>
+    
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+ 
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <% @all_students.each do |id, firstname, lastname, major, email, status| %>
+      <tr>
+      <th scope="id"><%= id %></th>
+      <td><a href="/students/<%= id %>"><%= firstname %> <%= lastname %></a></td>
+      <td><a href="/students/<%= id %>/edit" class="btn btn-success">Edit</a></td>
+      <td><a href = "/students/<%= id %>/delete" class="btn btn-danger">Delete</a></td>
+      </tr>
+      <% end %>
+    
+    
+  </tbody>
+</table>
+</p>
