@@ -13,6 +13,23 @@ get '/students' do
    end
 end
 
+get %r{/students/(enrolled|graduated)} do
+   pass if request.path=~ /\/students\/graduated/
+   db = DBHandler.new
+   @all_students = db.enrolled('Enrolled')
+   erb :application do
+      erb :index 
+   end
+end
+
+get '/students/graduated' do
+   db = DBHandler.new
+   @all_students = db.enrolled('Graduated')
+   erb :application do
+      erb :index 
+   end
+end
+
 get '/students/new' do
    erb :application do
       erb :new 
